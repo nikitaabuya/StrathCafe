@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>StrathCafe - Order from Strathmore University Cafeterias</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
+
+</head>
+
+<body>
+  
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" class="img-fluid" width="30px"><strong>StrathCafe</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="home.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacts</a>
+          </li>
+        </ul>
+
+
+        <ul class="nav navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="fas fa-user"></i><strong> <?=$_SESSION['FirstName'];?> <?=$_SESSION['LastName'];?> - <?=$_SESSION['AdmissionNumber'];?></strong></span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="profile.php">View Profile</a>
+              <a class="dropdown-item" href="logout.php">Logout</a>
+            </div>
+          </li>
+        </ul>
+
+
+      </div>
+    </nav>
+<style>
+ .menu-body {
+  max-width: 680px;
+  margin: 0 auto;
+  display: block;
+  color: rgb(92, 92, 92);
+}
+
+.menu-section {
+  margin-bottom: 80px;
+}
+
+.menu-section-title {
+  font-family: georgia;
+  font-size: 50px;
+  display: block;
+  font-weight:normal;
+  margin: 20px 0;
+  text-align: Center;
+}
+
+.menu-item {
+  margin: 35px 0;
+  font-size: 18px;
+}
+
+.menu-item-name{
+  font-family: helvetica;
+  font-weight: bold;
+  border-bottom: 2px dotted rgb(213, 213, 213);
+}
+
+.menu-item-description {
+  font-style: italic;
+  font-size: .9em;
+  line-height: 1.5em;
+}
+
+.menu-item-price{
+  float: right;
+  font-weight: bold;
+  font-family: arial;
+  margin-top: -22px;
+}
+
+</style>
+<div class="menu-body">
+ <div class="menu-section">
+  <h2 class="menu-section-title">
+   Starters
+  </h2>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Spring Rolls
+   </div>
+   <div class="menu-item-price">
+    $70
+   </div>
+   <div class="menu-item-description">
+    Cabbage, celery, carrots, green onions and Chinese noodles in a crispy wonton wrapper.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Veggie Samosas
+   </div>
+   <div class="menu-item-price">
+    $30
+   </div>
+   <div class="menu-item-description">
+    Pastry filled with a mixture of mashed potatoes, onions, lentils and spices.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+   Meaty samosas
+   </div>
+   <div class="menu-item-price">
+    $35
+   </div>
+   <div class="menu-item-description">
+    Pastry filled with meaty goodness.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Sausages
+   </div>
+   <div class="menu-item-price">
+    $20
+   </div>
+   <div class="menu-item-description">
+    Sausages made out of beef, chicken or pork.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Kebabs
+   </div>
+   <div class="menu-item-price">
+    $30
+   </div>
+   <div class="menu-item-description">
+    Freshly fried mixture of onions, breadcrumbs, garlic, ginger and corriander.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Omelettes
+   </div>
+   <div class="menu-item-price">
+    $20
+   </div>
+   <div class="menu-item-description">
+    Delicious freshly fried egg omelettes. 
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Bacon
+   </div>
+   <div class="menu-item-price">
+    $25
+   </div>
+   <div class="menu-item-description">
+    Deeply fried tasty pork strips.
+   </div>
+  </div>
+  </div>
+
+
+
+ <div class="menu-section">
+  <h2 class="menu-section-title">
+   Meaty dishes
+  </h2>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Lollipop Chicken Wings
+   </div>
+   <div class="menu-item-price">
+    $250
+   </div>
+   <div class="menu-item-description">
+    Tasty chicken wings dipped in tasty sauce!
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Fried Chicken
+   </div>
+   <div class="menu-item-price">
+    $150
+   </div>
+   <div class="menu-item-description">
+    Very tasty fried chicken.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Beef Stew
+   </div>
+   <div class="menu-item-price">
+    $130
+   </div>
+   <div class="menu-item-description">
+    Tasty beefy chunks in a stew.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Fried beef
+   </div>
+   <div class="menu-item-price">
+    $120
+   </div>
+   <div class="menu-item-description">
+    Chunky pieces of beef that have been friedand taste amazing!
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Sweet &amp; Sour Chicken
+   </div>
+   <div class="menu-item-price">
+    $190
+   </div>
+   <div class="menu-item-description">
+    Diced chicken breast lightly stir-fried with a tangy sweet and spice sauce.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Fried tilapia fish
+   </div>
+   <div class="menu-item-price">
+    $150
+   </div>
+   <div class="menu-item-description">
+    Tilapia fish fried to maximum goodness.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Stewed fish
+   </div>
+   <div class="menu-item-price">
+    $120
+   </div>
+   <div class="menu-item-description">
+    Amazing tasting fish bits in tasty stew!
+   </div>
+  </div>
+ </div>
+
+
+<div class="menu-section">
+  <h2 class="menu-section-title">
+   Side dishes
+  </h2>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Plain fries
+   </div>
+   <div class="menu-item-price">
+    $100
+   </div>
+   <div class="menu-item-description">
+    Freshly chopped and fried potatoes.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Masala fries
+   </div>
+   <div class="menu-item-price">
+    $130
+   </div>
+   <div class="menu-item-description">
+    Fried potatoes dipped in tasty masala sauce.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Seasoned fries
+   </div>
+   <div class="menu-item-price">
+    $110
+   </div>
+   <div class="menu-item-description">
+    Tasty fries that have sprinkled paprika spice.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Fried rice
+   </div>
+   <div class="menu-item-price">
+    $145
+   </div>
+   <div class="menu-item-description">
+    Tasty fried rice!
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Steamed rice
+   </div>
+   <div class="menu-item-price">
+    $130
+   </div>
+   <div class="menu-item-description">
+    Tasty rice that has been steamed!
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Pilau
+   </div>
+   <div class="menu-item-price">
+    $200
+   </div>
+   <div class="menu-item-description">
+    Very flavoured packed vegan rice with tons of spices!
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Mashed potatoes
+   </div>
+   <div class="menu-item-price">
+    $120
+   </div>
+   <div class="menu-item-description">
+    Enjoy our mashed potatoes.
+   </div>
+  </div>
+    <div class="menu-item">
+   <div class="menu-item-name">
+    Onion rings
+   </div>
+   <div class="menu-item-price">
+    $100
+   </div>
+   <div class="menu-item-description">
+    Enjoy our mashed potatoes.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Beans
+   </div>
+   <div class="menu-item-price">
+    $110
+   </div>
+   <div class="menu-item-description">
+    Well-cooked beans that you can have with any meal.
+   </div>
+  </div>
+</div>
+
+
+
+<div class="menu-section">
+  <h2 class="menu-section-title">
+   Main dishes
+  </h2>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Fish &amp; chips
+   </div>
+   <div class="menu-item-price">
+    $210
+   </div>
+   <div class="menu-item-description">
+    Tasty fish offered together with a side of chips.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Fish &amp; rice
+   </div>
+   <div class="menu-item-price">
+    $230
+   </div>
+   <div class="menu-item-description">
+    Delicious steamed rice together with stewed or fried fish.
+   </div>
+  </div>
+    <div class="menu-item">
+   <div class="menu-item-name">
+    Spaghetti &amp; meatballs
+   </div>
+   <div class="menu-item-price">
+    $200
+   </div>
+   <div class="menu-item-description">
+    Tasty meatballs with spaghetti.
+   </div>
+  </div>
+    <div class="menu-item">
+   <div class="menu-item-name">
+    Pizza slices
+   </div>
+   <div class="menu-item-price">
+    $150
+   </div>
+   <div class="menu-item-description">
+    Every slice has goodness.
+   </div>
+  </div>
+    <div class="menu-item">
+   <div class="menu-item-name">
+    Tandoori Cauliflower
+   </div>
+   <div class="menu-item-price">
+    $300
+   </div>
+   <div class="menu-item-description">
+    Recommended for vegans.
+   </div>
+  </div>
+ </div>
+
+
+
+
+ <div class="menu-section">
+  <h2 class="menu-section-title">
+   Desserts
+  </h2>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Chocolate Fudge cake
+   </div>
+   <div class="menu-item-price">
+    $160
+   </div>
+   <div class="menu-item-description">
+    Tasty cake full of chocolatey goodness.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Marble cake
+   </div>
+   <div class="menu-item-price">
+    $120
+   </div>
+   <div class="menu-item-description">
+    Cake with a mixture of vanilla and streaks of chocolate.
+   </div>
+  </div>
+    <div class="menu-item">
+   <div class="menu-item-name">
+    Brownie
+   </div>
+   <div class="menu-item-price">
+    $100
+   </div>
+   <div class="menu-item-description">
+    Delicious brownies full of chocolatey goodness.
+   </div>
+  </div>
+    <div class="menu-item">
+   <div class="menu-item-name">
+    Plain doughnut
+   </div>
+   <div class="menu-item-price">
+    $45
+   </div>
+   <div class="menu-item-description">
+    A simple cake doughnut lightly spiced with cinnamon and nutmeg.
+   </div>
+  </div>
+    <div class="menu-item">
+   <div class="menu-item-name">
+    Chocolate doughnut
+   </div>
+   <div class="menu-item-price">
+    $50
+   </div>
+   <div class="menu-item-description">
+    Delicious donuts dipped in tasty chocolate.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Rock cake
+   </div>
+   <div class="menu-item-price">
+    $30
+   </div>
+   <div class="menu-item-description">
+    Large cookies filled with raisins.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Plain muffin
+   </div>
+   <div class="menu-item-price">
+    $45
+   </div>
+   <div class="menu-item-description">
+    Delicious  plain muffins.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Chocolate chip muffin
+   </div>
+   <div class="menu-item-price">
+    $55
+   </div>
+   <div class="menu-item-description">
+    large muffins filled with tasty chocolate chips.
+   </div>
+  </div>
+ </div>
+
+
+
+ <div class="menu-section">
+  <h2 class="menu-section-title">
+   Salads
+  </h2>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Fruit salads
+   </div>
+   <div class="menu-item-price">
+    $150
+   </div>
+   <div class="menu-item-description">
+    Dish of various freshly chopped fruits. 
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Grilled chicken strips salad
+   </div>
+   <div class="menu-item-price">
+    $130
+   </div>
+   <div class="menu-item-description">
+    A chicken salad made with chicken, celery, cucumber, mayonnaise with salt and pepper.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Garden salad
+   </div>
+   <div class="menu-item-price">
+    $110
+   </div>
+   <div class="menu-item-description">
+    Lettuce, carrots, tomatoes, radishes and several herbs.
+   </div>
+  </div>
+ </div>
+
+
+
+ <div class="menu-section">
+  <h2 class="menu-section-title">
+   Drinks
+  </h2>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Fruit juice
+   </div>
+   <div class="menu-item-price">
+    $55
+   </div>
+   <div class="menu-item-description">
+    Available juices are Mango, Passion and Cocktail Juices. Take away cups cost $5.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Water (1L)
+   </div>
+   <div class="menu-item-price">
+    $70
+   </div>
+   <div class="menu-item-description">
+    Water comes in packaged bottles. Room temperature or Cold.
+   </div>
+   <div class="menu-item">
+   <div class="menu-item-name">
+    Water (500ml)
+   </div>
+   <div class="menu-item-price">
+    $50
+   </div>
+   <div class="menu-item-description">
+    Water comes in packaged bottles. Room temperature or Cold.
+   </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Water (250ml)
+   </div>
+   <div class="menu-item-price">
+    $25
+   </div>
+   <div class="menu-item-description">
+    Water comes in packaged bottles. Room temperature or Cold.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Yoghurt
+   </div>
+   <div class="menu-item-price">
+    $60
+   </div>
+   <div class="menu-item-description">
+    Cool yoghurt with assorted flavours.
+   </div>
+  </div>
+  <div class="menu-item">
+   <div class="menu-item-name">
+    Soda
+   </div>
+   <div class="menu-item-price">
+    $50
+   </div>
+   <div class="menu-item-description">
+    Available sodas are Fanta, Sprite, Cocacola, Novida and Krest. Take away cups are $10.
+   </div>
+  </div>
+ </div>
+</div>
