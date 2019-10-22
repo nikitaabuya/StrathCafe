@@ -36,7 +36,7 @@ if (!isset($_SESSION['loggedin'])) {
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 			<a class="navbar-brand" href="#">
 				<img src="logo.png" class="img-fluid" width="30px"><strong>StrathCafe</strong>
 			</a>
